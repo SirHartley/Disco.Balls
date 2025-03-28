@@ -1,0 +1,50 @@
+id,trigger,conditions,script,text,options,notes
+moreColours_fusionLampMainOptions_dOff,FusionLampMainOptions,!$isDiscoMode,,,"0:fusionLamp_changeColor:Adjust the lamp's visible emission range
+1:moreColours_fusionLamp_changeColor:Additional visible emission colour options
+2:moreColours_engageDiscoMode:Engage Disco Mode
+3:fusionLamp_help:Help
+100:defaultLeave:Leave",
+moreColours_fusionLampMainOptions_dOn,FusionLampMainOptions,$isDiscoMode,,,"0:fusionLamp_changeColor:Adjust the lamp's visible emission range
+1:moreColours_fusionLamp_changeColor:Additional visible emission colour options
+2:moreColours_disengageDiscoMode:Disengage Disco Mode
+3:fusionLamp_help:Help
+100:defaultLeave:Leave",
+,,,,,,
+moreColours_engageDiscoMode,DialogOptionSelected,$option == moreColours_engageDiscoMode,"MoreColour_DiscoControls ON
+FireBest FusionLampMainOptions","""DISCO MODE engaged! We hope your [COLONISTS / EMPLOYEES / CUSTOMERS / OTHER] enjoy the original Fabrique Orbitale Orbital Fusion Lamp planetwide disco experience. Night is disco with Fabrique Orbitale!""",,
+moreColours_disengageDiscoMode,DialogOptionSelected,$option == moreColours_disengageDiscoMode,"MoreColour_DiscoControls OFF
+FireBest FusionLampMainOptions","""DISCO MODE disengaged! Lame.",,
+,,,,,,
+moreColours_fusionLamp_changeColor,DialogOptionSelected,$option == moreColours_fusionLamp_changeColor,SetShortcut fusionLamp_goBack ESCAPE,"""Please enjoy the multitude of color options provided to ensure optimal comfort and health to your [COLONISTS / EMPLOYEES / CUSTOMERS / OTHER].""
+
+After a moment's contemplation, you decide to set the color to...","0:moreColours_fusionLampPurple:Royal Purple, for phase enthusiasts
+1:moreColours_fusionLampHotPink:Light Pink, like a mine explosion
+2:moreColours_fusionLampMedPink:Dark Pink, an like antimatter blaster
+3:moreColours_fusionLampDarkBlue:Dark Blue, like an ocean
+4:moreColours_fusionLampCyan:Cyan, like [REDACTED]
+5:moreColours_fusionLampDarkGreen:Muted Green, like a toxic sun
+6:fusionLamp_goBack:Go back
+
+
+
+
+
+",
+moreColours_fusionLampPurple,DialogOptionSelected,$option == moreColours_fusionLampPurple,"SetColor $core_lampGlowColor 183,50,255,255
+SetColor $core_lampLightColor 183,50,255,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
+moreColours_fusionLampDarkBlue,DialogOptionSelected,$option == moreColours_fusionLampDarkBlue,"SetColor $core_lampGlowColor 46,60,255,255
+SetColor $core_lampLightColor 46,60,255,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
+moreColours_fusionLampHotPink,DialogOptionSelected,$option == moreColours_fusionLampHotPink,"SetColor $core_lampGlowColor 255,204,254,255
+SetColor $core_lampLightColor 255,204,254,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
+moreColours_fusionLampMedPink,DialogOptionSelected,$option == moreColours_fusionLampMedPink,"SetColor $core_lampGlowColor 255,145,253,255
+SetColor $core_lampLightColor 255,145,253,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
+moreColours_fusionLampCyan,DialogOptionSelected,$option == moreColours_fusionLampCyan,"SetColor $core_lampGlowColor 100,255,237,255
+SetColor $core_lampLightColor 100,255,237,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
+moreColours_fusionLampDarkGreen,DialogOptionSelected,$option == moreColours_fusionLampDarkGreen,"SetColor $core_lampGlowColor 62,150,62,255
+SetColor $core_lampLightColor 62,150,62,255
+FireBest FusionLampMainOptions",Thank you for using the Fabrique Orbitale Color Selector (tm)!,,
