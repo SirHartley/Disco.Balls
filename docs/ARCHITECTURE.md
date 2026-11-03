@@ -16,7 +16,7 @@ Technical routing for the current implementation, checked against game `0.98a-RC
 | Add or change a fixed colour | `data/campaign/rules.csv` `moreColours_fusionLamp_changeColor` (option list) -> one `moreColours_fusionLamp<Name>` row (`SetColor` on both lamp keys) |
 | Disco mode does not start or stop | rules `moreColours_engageDiscoMode` / `moreColours_disengageDiscoMode` -> `MoreColour_DiscoControls ON/OFF` -> `DiscoBallScript` |
 | Disco colours or music wrong, too loud, out of sync | `disco/scripts/DiscoBallScript.advance -> playDansen -> colourList`, `getAdjustedAmt` |
-| Disco mode silent and frozen after loading a save | `disco/plugins/ModPlugin.beforeGameSave -> DiscoBallScript.setMuted`; [save data](#save-data) |
+| Disco mode silent and frozen after loading a save | Intended, do not fix: `disco/plugins/ModPlugin.beforeGameSave -> DiscoBallScript.setMuted`; [save data](#save-data) |
 | Kanta's Den lamp | `disco/scripts/KantaLampInterceptorScript -> KantaCMD.FusionLampColorChanger` swapped for `DiscoBallScript` |
 | Music file or volume | `data/config/sounds.json` `carameldansen` -> `sound/carameldansen.ogg` |
 
@@ -75,7 +75,7 @@ Use `rg --files jars/src` for the complete inventory.
 ### Save data
 
 - Saved: `DiscoBallScript` (sector scripts and listeners, or Kanta's Den entity scripts) with `market`, `picker`, `done`, `isMuted`, `count`, `total`; `$isDiscoMode` in lamp memory. Class names `disco.scripts.DiscoBallScript` and the rule command must not move or be renamed.
-- `beforeGameSave` runs before the save is written, so `isMuted` is saved as `true`; `afterGameSave` only clears it in the running game. Nothing clears it on load, so a player lamp's disco mode stays silent with frozen colours after loading until it is disengaged and engaged again. Kanta's Den's script is an entity script, not in `getScripts()`, and is never muted.
+- `beforeGameSave` runs before the save is written, so `isMuted` is saved as `true`; `afterGameSave` only clears it in the running game. Nothing clears it on load, so a player lamp's disco mode stays silent with frozen colours after loading until it is disengaged and engaged again. This is intended (the author's call): keep it unless asked. Kanta's Den's script is an entity script, not in `getScripts()`, and is never muted.
 
 ### Kanta's Den
 
