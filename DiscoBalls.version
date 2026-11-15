@@ -5,8 +5,8 @@
     {
         "major":1,
         "minor":1,
-        "patch":"c"
+        "patch":"d"
     },
-    "directDownloadURL":"https://github.com/SirHartley/Disco.Balls/releases/download/1.1.c/Disco.Balls1.0.c.zip",
+    "directDownloadURL":"https://github.com/SirHartley/Disco.Balls/releases/download/1.1.d/Disco.Balls-1.1.d.zip",
     "changelogURL":"https://raw.githubusercontent.com/SirHartley/Disco.Balls/refs/heads/master/Changelog",
 }
