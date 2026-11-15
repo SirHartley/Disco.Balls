@@ -11,7 +11,7 @@ How Disco.Balls is built, packaged and published. Nothing here runs unless a rel
 | Version file | `DiscoBalls.version` | Online Version Checker file on `master`, registered in `data/config/version/version_files.csv`; stamped at packaging, committed back after a release |
 | Release builder | `jars/src/disco/tools/ReleaseBuild.java` | `build` and `package`, run with `java <file>` |
 | Builder checks | `jars/src/disco/tools/ReleaseBuildChecks.java` | Headless checks of changelog parsing, stamping and file filtering |
-| Build libraries | `lib/` | `starfarer.api.jar` built from the game `0.98.5a-RC4` API sources (`starsector-knowledge` skill); `lwjgl.jar`, `lwjgl_util.jar`, `json.jar` and `log4j-1.2.9.jar` from game `0.98a-RC8`, copied from Industrial.Evolution's `lib/` |
+| Build libraries | `lib/` | `starfarer.api.jar` from game `0.98.5a-RC6`; `lwjgl.jar`, `lwjgl_util.jar`, `json.jar` and `log4j-1.2.9.jar` from game `0.98a-RC8`, copied from Industrial.Evolution's `lib/` |
 | Release jar | `jars/release/MoreLampColourOptions.jar` | Built by `build`, gitignored, runtime classes only; shipped as `jars/MoreLampColourOptions.jar` |
 | Release workflow | `.github/workflows/release.yml` | Manual only: preview without a version, publish with one |
 
