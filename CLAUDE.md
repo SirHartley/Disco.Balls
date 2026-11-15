@@ -1,6 +1,6 @@
 # Disco.Balls
 
-Starsector mod (game `0.98a`) that adds six colours to the player's Orbital Fusion Lamp dialog and a Disco Mode that cycles the lamp colour to music. Mostly data (`rules.csv`, a sound); a small jar runs the disco script and its rule command.
+Starsector mod (game `0.98.5a`) that adds six colours to the player's Orbital Fusion Lamp dialog and a Disco Mode that cycles the lamp colour to music. Mostly data (`rules.csv`, a sound); a small jar runs the disco script and its rule command.
 
 ## Required workflow
 
