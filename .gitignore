@@ -1,2 +1,4 @@
-# Project exclude paths
-/jars/
+/out/
+/jars/production/
+/jars/release/
+/jars/MoreLampColourOptions.jar

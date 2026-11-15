@@ -1,0 +1,12 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/SirHartley/Disco.Balls/master/DiscoBalls.version",
+    "modName":"Disco.Balls",
+    "modVersion":
+    {
+        "major":1,
+        "minor":1,
+        "patch":"c"
+    },
+    "directDownloadURL":"https://github.com/SirHartley/Disco.Balls/releases/download/1.1.c/Disco.Balls1.0.c.zip",
+    "changelogURL":"https://raw.githubusercontent.com/SirHartley/Disco.Balls/refs/heads/master/Changelog",
+}
